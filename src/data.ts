@@ -158,7 +158,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     id: "proj-blog",
     num: "01",
     title: "BlogPage Website",
-    description: "Built dynamic telemetry dashboards and priority alert trackers visualizing parts condition, inspections log, and fuel levels.",
+    description: "A full-stack publishing and editorial workflow platform where users can submit articles, receive feedback, revise content, and publish through a structured admin moderation system. Features include JWT authentication, review workflows, email notifications, categorized content management, protected admin dashboards, and a fully responsive modern UI.",
     details: ["React", "TypeScript", "SCSS", "NodeJs", "MongoDB"],
     image: proj1,
   },
@@ -166,7 +166,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     id: "proj-employee",
     num: "02",
     title: "Employee Management and Monitering Portal",
-    description: "Implemented event-detection logic and user mappings processing activity timestamps from wearable devices.",
+    description: "Developed an employee monitoring website which aims to provide a centralized platform to small organizations which saves time and provides user friendly approach",
     details: ["NodeJS", "MongoDB", "ReactJS", "TypeScript", "REST APIs"],
     image: proj3,
   },
@@ -174,7 +174,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     id: "proj-chatbot",
     num: "03",
     title: "Chatbot",
-    description: "Developed streaming telemetry interfaces displaying live sensor data grids and automated system diagnostic parameters.",
+    description: "Designed and implemented a user friendly chatbot interface with a sleek, responsive layout, enhancing user interaction and engagement.",
     details: ["React", "JavaScript", "REST APIs"],
     image: proj2,
   },
@@ -182,7 +182,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     id: "proj-personal",
     num: "04",
     title: "Personalized Website",
-    description: "Designed drag-and-drop state trigger modules allowing configuration-driven chats and live flow changes.",
+    description: "Developed a personal website for a professor which showcases the professor's research work and provides information about their academic background. It also includes the couses, course structure and the course materials taught by the professor.",
     details: ["HTML", "CSS", "JavaScript"],
     image: proj4,
     liveUrl: "https://anjanashreya.github.io/Personal-Website/"
@@ -199,7 +199,6 @@ export const PROCESS_STEPS: ProcessStep[] = [
 ];
 
 export const SOCIAL_LINKS = [
-  { name: "LinkedIn", url: "#" },
-  { name: "GitHub", url: "#" },
-  { name: "E-Mail", url: "#"}
+  { name: "LinkedIn", url: "www.linkedin.com/in/ch-s-anjana-shreya-68a74628a" },
+  { name: "GitHub", url: "https://github.com/AnjanaShreya" },
 ];

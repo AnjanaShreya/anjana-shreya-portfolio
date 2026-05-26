@@ -52,11 +52,11 @@ export default function Process() {
                   <span className={`font-mono text-xs px-2.5 py-1 rounded bg-white/5 shrink-0 ${
                     isSelected ? "text-accent-pink border border-accent-pink/20 bg-accent-pink/5" : "text-neutral-500"
                   }`}>
-                    0{step.num}
+                    {step.num}
                   </span>
 
                   <div className="space-y-2 text-left">
-                    <h3 className={`font-display font-medium text-lg leading-none ${
+                    <h3 className={`font-display font-medium text-lg leading-none leading-relaxed ${
                       isSelected ? "text-white" : "text-neutral-400"
                     }`}>
                       {step.title}

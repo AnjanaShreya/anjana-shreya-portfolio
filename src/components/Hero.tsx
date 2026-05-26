@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 import { ArrowDown, Stars, Terminal, ArrowRight } from "lucide-react";
 
 export default function Hero() {
-  const handleScrollToWorks = () => {
-    const el = document.getElementById("works");
+  const handleScrollToAbout = () => {
+    const el = document.getElementById("about");
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -86,7 +86,7 @@ export default function Hero() {
             className="flex flex-wrap items-center justify-center gap-4 pt-2"
           >
             {/* <button
-              onClick={handleScrollToWorks}
+              onClick={handleScrollToAbout}
               className="px-6 py-3 rounded-full bg-white text-black font-mono text-xs uppercase tracking-widest font-bold hover:bg-neutral-200 transition-colors duration-300 flex items-center gap-2 group shadow-xl shadow-white/5"
             >
               [ EXPLORE PORTFOLIO ]
@@ -108,7 +108,7 @@ export default function Hero() {
       </div>
 
       {/* Slide indicator chevron */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 select-none text-neutral-500 hover:text-white transition-colors cursor-pointer" onClick={handleScrollToWorks}>
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 select-none text-neutral-500 hover:text-white transition-colors cursor-pointer" onClick={handleScrollToAbout}>
         <span className="font-mono text-[9px] uppercase tracking-widest text-neutral-600">SCROLL DOWN</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}

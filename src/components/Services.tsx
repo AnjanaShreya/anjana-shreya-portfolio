@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Plus, Minus, Activity, Sparkles } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 import { INTERNSHIPS } from "../data";
 
 export default function Services() {
