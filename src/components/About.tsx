@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { ArrowUpRight, Compass, Code, Server, Terminal } from "lucide-react";
+import { Compass, Code, Server, Terminal } from "lucide-react";
 import resumePdf from "../assets/Anjana shreya .pdf";
+import { EDUCATION, ACADEMIC_FOCUS, COURSEWORK_TAGS } from "../data";
 
 export default function About() {
   const [hoveredBadge, setHoveredBadge] = useState(false);
@@ -80,8 +81,9 @@ export default function About() {
       {/* Full-width edge-to-edge horizontal divider line */}
       <div className="w-full border-t border-white/10 my-16 md:my-24" />
 
-      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
-        {/* Middle Asset Section: Framed iPad/Device mockup display inspired by Screen 6 */}
+      {/* EDUCATION SECTION FIRST */}
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 pb-4">
+        {/* Middle Asset Section: Commented out mockup workstation environment */}
         {/* <div className="relative mt-12 md:mt-16 rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/80 max-w-5xl mx-auto">
           <div className="absolute inset-0 bg-primary-dark/10 mix-blend-multiply z-10 pointer-events-none" />
           <div className="absolute top-0 inset-x-0 h-10 bg-neutral-900/90 border-b border-white/15 flex items-center justify-between px-4 z-20">
@@ -106,11 +108,115 @@ export default function About() {
             <div className="absolute bottom-4 right-4 bg-black/90 backdrop-blur-md border border-white/10 p-3 rounded-lg z-20 flex items-center gap-3 font-mono text-[10px] tracking-wide text-neutral-300">
               <span className="animate-pulse h-1.5 w-1.5 rounded-full bg-white" />
               <span>THEORETICAL MODEL v1.08</span>
-              <ArrowUpRight className="h-3.5 w-3.5 text-accent-pink" />
+              <Compass className="h-3.5 w-3.5 text-accent-pink" />
             </div>
           </div>
         </div> */}
 
+        {/* Education Heading */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
+          <div className="space-y-2">
+            <span className="font-mono text-[10px] text-accent-pink tracking-widest uppercase block">// ACADEMIC FOUNDATION</span>
+            <h2 className="font-syne font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mt-1">
+              Education
+            </h2>
+          </div>
+        </div>
+
+        {/* Creative Education Display */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          {/* Left Column: Interactive Timeline Card */}
+          <div className="lg:col-span-7 flex flex-col space-y-6">
+            {EDUCATION.map((edu, idx) => (
+              <div 
+                key={idx}
+                className="relative pl-8 border-l border-white/10 hover:border-accent-pink/40 transition-colors duration-300 group py-2"
+              >
+                {/* Timeline node */}
+                <div className="absolute -left-[5px] top-6 h-2.5 w-2.5 rounded-full bg-neutral-800 border border-white/20 group-hover:bg-accent-pink group-hover:border-accent-pink group-hover:shadow-[0_0_10px_rgba(244,114,182,0.6)] transition-all duration-300" />
+                
+                <div className="bg-white/[0.01] hover:bg-white/[0.03] border border-white/5 hover:border-white/15 p-6 rounded-2xl transition-all duration-300 relative overflow-hidden flex flex-col gap-2 shadow-2xl shadow-black/40">
+                  <div className="flex flex-wrap justify-between items-start gap-2">
+                    <div>
+                      <span className="font-mono text-[10px] text-accent-blue tracking-wider uppercase block">{edu.period}</span>
+                      <h3 className="font-display font-medium text-lg text-white group-hover:text-accent-pink transition-colors mt-0.5">
+                        {edu.degree}
+                      </h3>
+                    </div>
+                    {edu.grade && (
+                      <span className="text-[10px] font-mono px-2.5 py-0.5 rounded border border-accent-pink/20 bg-accent-pink/5 text-accent-pink uppercase tracking-widest shrink-0 font-bold">
+                        {edu.grade}
+                      </span>
+                    )}
+                  </div>
+                  
+                  <p className="text-neutral-400 text-xs font-light">
+                    {edu.institution}
+                  </p>
+                  
+                  {edu.details && (
+                    <ul className="list-none space-y-2 mt-3">
+                      {edu.details.map((detail, dIdx) => (
+                        <li key={dIdx} className="text-neutral-400 group-hover:text-neutral-300 transition-colors text-[11px] font-light flex items-start gap-2 leading-relaxed">
+                          <span className="text-accent-pink font-bold font-mono shrink-0 select-none">›</span>
+                          <span>{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Column: Specializations, Key Coursework & Focus Areas Panel */}
+          <div className="lg:col-span-5 bg-white/[0.01] border border-white/5 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-white/10 transition-colors relative overflow-hidden group shadow-2xl shadow-black/40">
+            <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-accent-pink/5 blur-[50px] pointer-events-none -z-10 group-hover:bg-accent-pink/10 transition-all duration-500" />
+            
+            <div className="space-y-6">
+              <div>
+                <span className="font-mono text-[10px] text-accent-pink tracking-widest uppercase block">// AREAS OF STUDY</span>
+                <h3 className="font-syne font-bold text-xl text-white tracking-tight mt-1">
+                  Academic Focus
+                </h3>
+              </div>
+              
+              <div className="space-y-5">
+                {ACADEMIC_FOCUS.map((item, idx) => (
+                  <div key={idx} className="flex gap-3.5 items-start">
+                    <div className="h-6 w-6 rounded bg-white/5 border border-white/5 flex items-center justify-center font-mono text-[10px] text-accent-pink font-bold shrink-0 mt-0.5">
+                      0{idx + 1}
+                    </div>
+                    <div>
+                      <h4 className="font-display font-medium text-xs text-neutral-200">{item.title}</h4>
+                      <p className="text-neutral-500 text-[10px] font-light mt-0.5 leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="mt-8 pt-6 border-t border-white/5 flex flex-wrap gap-1.5">
+              {COURSEWORK_TAGS.map((tag, idx) => (
+                <span 
+                  key={idx}
+                  className="text-[9px] font-mono px-2 py-0.5 rounded border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] text-neutral-400 hover:text-white transition-all duration-300"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      {/* Full-width edge-to-edge horizontal divider line */}
+      <div className="w-full border-t border-white/10 my-16 md:my-24" />
+
+      {/* SKILLS SECTION SECOND */}
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         {/* Skills Heading */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
           <div className="space-y-2">

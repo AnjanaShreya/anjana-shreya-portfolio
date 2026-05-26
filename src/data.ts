@@ -199,6 +199,54 @@ export const PROCESS_STEPS: ProcessStep[] = [
 ];
 
 export const SOCIAL_LINKS = [
-  { name: "LinkedIn", url: "www.linkedin.com/in/ch-s-anjana-shreya-68a74628a" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/ch-s-anjana-shreya-68a74628a" },
   { name: "GitHub", url: "https://github.com/AnjanaShreya" },
+  { name: "E-Mail", url: "mailto:chitturianjana@gmail.com"}
+];
+
+export interface EducationItem {
+  degree: string;
+  institution: string;
+  period: string;
+  grade?: string;
+  details?: string[];
+}
+
+export const EDUCATION: EducationItem[] = [
+  {
+    degree: "Bachelor of Technology (B.Tech)",
+    institution: "Computer Science & Engineering",
+    period: "2021 - 2025",
+    grade: "7.0 CGPA",
+    details: [
+      "Specialized in Software Engineering and Modern Web Architectures.",
+      "Hands-on coursework in Data Structures, Algorithms and DBMS.",
+    ]
+  }
+];
+
+export const ACADEMIC_FOCUS = [
+  {
+    title: "Software Engineering & Architecture",
+    desc: "Object-oriented design patterns, software testing, systems analysis, and modular application development."
+  },
+  {
+    title: "Advanced Web Technologies",
+    desc: "Full-stack development ecosystems, single-page application architectures, and client-side performance engineering."
+  },
+  {
+    title: "Algorithmic Problem Solving",
+    desc: "Analyzing algorithm complexities, optimizing runtime efficiency, and structured data structure design."
+  }
+];
+
+export const COURSEWORK_TAGS = [
+  "Data Structures",
+  "Algorithms",
+  "DBMS",
+  "OOPs",
+  "Software Eng.",
+  "Web Technologies",
+  "Computer Networks",
+  "Operating Systems"
 ];
