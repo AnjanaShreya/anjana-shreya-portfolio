@@ -10,6 +10,8 @@
   --color-primary-dark: #080808;
   --color-accent-blue: #2563eb;
   --color-accent-pink: #f472b6;
+  --color-accent-cyan: #06b6d4;
+  --color-accent-purple: #a855f7;
 }
 
 /* Custom Scrollbars & Utilities */
@@ -39,13 +41,25 @@
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 25s linear infinite;
+  animation: marquee 50s linear infinite;
 }
 
 .animate-marquee-reverse {
   display: flex;
   width: max-content;
-  animation: marquee-reverse 25s linear infinite;
+  animation: marquee-reverse 50s linear infinite;
+}
+
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marquee 90s linear infinite;
+}
+
+.animate-marquee-slow-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 90s linear infinite;
 }
 
 /* Smooth cursor visual style */

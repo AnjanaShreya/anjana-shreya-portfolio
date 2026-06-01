@@ -11,9 +11,9 @@ interface MenuDrawerProps {
 export default function MenuDrawer({ isOpen, onClose, activeSection }: MenuDrawerProps) {
   const menuItems = [
     { num: "01", name: "Home", target: "home" },
-    { num: "02", name: "Experiences", target: "services" },
-    { num: "03", name: "About", target: "about" },
-    {num: "04", name: "Projects", target: "projects"},
+    { num: "02", name: "About", target: "about" },
+    { num: "03", name: "Experience", target: "services" },
+    { num: "04", name: "Projects", target: "projects" },
     { num: "05", name: "Contact", target: "contact" }
   ];
 

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowDown, Stars, Terminal, ArrowRight } from "lucide-react";
+import resumePdf from "../assets/Anjana shreya .pdf";
 
 export default function Hero() {
   const handleScrollToAbout = () => {
@@ -15,36 +16,55 @@ export default function Hero() {
       id="home"
       className="relative min-h-[92vh] flex flex-col justify-center items-center overflow-hidden bg-primary-dark pt-12 pb-16 cursor-default"
     >
-      {/* Absolute background huge text logo "ANJANA SHREYA" */}
-      <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none opacity-[0.015] z-0 font-syne font-extrabold text-[14vw] mt-20 tracking-wider leading-none uppercase">
+      {/* Absolute background huge text logo "ANJANA SHREYA" - Fixed */}
+      <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none opacity-[0.05] z-0 font-syne font-extrabold text-[12.5vw] ml-16 mt-20 tracking-wider leading-none uppercase">
         ANJANA SHREYA
       </div>
 
       {/* Decorative colored visual orbs */}
-      <div className="absolute top-1/4 left-1/10 w-96 h-96 rounded-full bg-accent-blue/10 blur-[120px] pointer-events-none -z-10" />
-      <div className="absolute bottom-1/4 right-1/10 w-96 h-96 rounded-full bg-accent-pink/10 blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/10 w-[550px] h-[550px] rounded-full bg-gradient-to-tr from-accent-blue/20 to-accent-cyan/15 blur-[120px] pointer-events-none -z-10 animate-pulse" style={{ animationDuration: "12s" }} />
+      <div className="absolute bottom-1/4 right-1/10 w-[550px] h-[550px] rounded-full bg-gradient-to-bl from-accent-pink/20 to-accent-purple/15 blur-[120px] pointer-events-none -z-10 animate-pulse" style={{ animationDuration: "18s" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent-blue/10 via-transparent to-accent-pink/10 blur-[150px] pointer-events-none -z-10" />
 
       {/* Dual bidirectional marquees from Screen 1 */}
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-0 hidden md:block">
         {/* Left marquee */}
-        <div className="relative overflow-hidden w-full h-[6rem] opacity-25 select-none pointer-events-none">
-          <div className="animate-marquee whitespace-nowrap flex py-2 border-y border-white/5 font-syne font-black text-6xl text-stroke-white tracking-widest leading-none">
-            {Array(6).fill(tickerOne).flat().map((word, idx) => (
-              <span key={idx} className="mx-8">
-                {word} <span className="text-white/20 select-none ml-8">/</span>
-              </span>
-            ))}
+        <div className="relative overflow-hidden w-full h-[6rem] opacity-45 select-none pointer-events-none">
+          <div className="animate-marquee py-2 border-y border-white/5 font-syne font-black text-6xl text-stroke-white tracking-widest leading-none">
+            <div className="flex whitespace-nowrap">
+              {Array(3).fill(tickerOne).flat().map((word, idx) => (
+                <span key={idx} className="mx-8">
+                  {word} <span className="text-white/25 select-none ml-8">/</span>
+                </span>
+              ))}
+            </div>
+            <div className="flex whitespace-nowrap" aria-hidden="true">
+              {Array(3).fill(tickerOne).flat().map((word, idx) => (
+                <span key={idx} className="mx-8">
+                  {word} <span className="text-white/25 select-none ml-8">/</span>
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Right marquee (reverse) */}
-        <div className="relative overflow-hidden w-full h-[6rem] opacity-20 select-none pointer-events-none mt-4">
-          <div className="animate-marquee-reverse whitespace-nowrap flex py-2 border-y border-white/5 font-syne font-black text-6xl text-stroke-white tracking-widest leading-none">
-            {Array(6).fill(tickerTwo).flat().map((word, idx) => (
-              <span key={idx} className="mx-8">
-                {word} <span className="text-white/20 select-none ml-8">/</span>
-              </span>
-            ))}
+        <div className="relative overflow-hidden w-full h-[6rem] opacity-40 select-none pointer-events-none mt-4">
+          <div className="animate-marquee-reverse py-2 border-y border-white/5 font-syne font-black text-6xl text-stroke-white tracking-widest leading-none">
+            <div className="flex whitespace-nowrap">
+              {Array(3).fill(tickerTwo).flat().map((word, idx) => (
+                <span key={idx} className="mx-8">
+                  {word} <span className="text-white/25 select-none ml-8">/</span>
+                </span>
+              ))}
+            </div>
+            <div className="flex whitespace-nowrap" aria-hidden="true">
+              {Array(3).fill(tickerTwo).flat().map((word, idx) => (
+                <span key={idx} className="mx-8">
+                  {word} <span className="text-white/25 select-none ml-8">/</span>
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -93,15 +113,14 @@ export default function Hero() {
               <ArrowDown className="h-3.5 w-3.5 group-hover:translate-y-1 transition-transform" />
             </button> */}
 
-            <button
-              onClick={() => {
-                const el = document.getElementById("about");
-                if (el) el.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="px-6 py-3 rounded-full border border-white/10 hover:border-white text-white font-mono text-xs uppercase tracking-widest transition-all duration-300"
+            <a
+              href={resumePdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-full border border-white/10 hover:border-white text-white font-mono text-xs uppercase tracking-widest transition-all duration-300 no-underline"
             >
-              Learn More
-            </button>
+              Get My Resume
+            </a>
           </motion.div>
         </div>
 

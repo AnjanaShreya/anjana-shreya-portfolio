@@ -51,8 +51,8 @@ export default function Navbar({ activeSection }: NavbarProps) {
           {/* Quick desktop navigation nodes */}
           <nav className="hidden md:flex items-center gap-8 text-xs font-mono tracking-widest text-neutral-300">
             {[
-              { label: "experience", target: "services" },
               { label: "about", target: "about" },
+              { label: "experience", target: "services" },
               { label: "projects", target: "projects" }
             ].map((link) => (
               <button

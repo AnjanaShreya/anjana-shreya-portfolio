@@ -7,6 +7,8 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 // import Portfolio from "./components/Portfolio";
 import Services from "./components/Services";
+import Skills from "./components/Skills";
+import Education from "./components/Education";
 import Process from "./components/Process";
 import Insights from "./components/Insights";
 import Contact from "./components/Contact";
@@ -135,9 +137,10 @@ export default function App() {
             <main id="primary-portfolio-root">
               <Hero />
               <About />
-              {/* <Portfolio /> */}
-              <Services />
-              <Process />
+              <Services /> {/* Experience */}
+              <Skills />
+              <Process /> {/* Projects */}
+              <Education />
               <Insights />
               <Contact />
             </main>
