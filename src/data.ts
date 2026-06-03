@@ -161,6 +161,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     description: "A full-stack publishing and editorial workflow platform where users can submit articles, receive feedback, revise content, and publish through a structured admin moderation system. Features include JWT authentication, review workflows, email notifications, categorized content management, protected admin dashboards, and a fully responsive modern UI.",
     details: ["React", "TypeScript", "SCSS", "NodeJs", "MongoDB"],
     image: proj1,
+    liveUrl: "https://legal-writing-blogpage.vercel.app/"
   },
   {
     id: "proj-employee",
