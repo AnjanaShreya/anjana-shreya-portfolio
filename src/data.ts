@@ -178,6 +178,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     description: "Designed and implemented a user friendly chatbot interface with a sleek, responsive layout, enhancing user interaction and engagement.",
     details: ["React", "JavaScript", "REST APIs"],
     image: proj2,
+    liveUrl: "https://trustworthy-ai-tawny.vercel.app/"
   },
   {
     id: "proj-personal",

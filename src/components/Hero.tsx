@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowDown, Stars, Terminal, ArrowRight } from "lucide-react";
-import resumePdf from "../assets/Anjana shreya .pdf";
+import resumePdf from "../assets/Anjana shreya - Resume.pdf";
 
 export default function Hero() {
   const handleScrollToAbout = () => {
